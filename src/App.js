@@ -2,14 +2,14 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Alert } from "./components/Alert";
 import { Navbar } from "./components/Navbar";
-import alertState from "./context/alert/alertState";
+import { AlertState } from "./context/alert/alertState";
 import { About } from "./pages/About";
 import { Home } from "./pages/Home";
 import { Profile } from "./pages/Profile";
 
 function App() {
   return (
-    <alertState>
+    <AlertState>
       <Router>
         <Navbar />
         <div className="container pt-4">
@@ -21,7 +21,7 @@ function App() {
           </Switch>
         </div>
       </Router>
-    </alertState>
+    </AlertState>
   );
 }
 

@@ -3,14 +3,14 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Alert } from "./components/Alert";
 import { Navbar } from "./components/Navbar";
 import { AlertState } from "./context/alert/alertState";
-import { GithubContext } from "./context/github/githubContext";
+import { GithubState } from "./context/github/githubState";
 import { About } from "./pages/About";
 import { Home } from "./pages/Home";
 import { Profile } from "./pages/Profile";
 
 function App() {
   return (
-    <GithubContext>
+    <GithubState>
       <AlertState>
         <Router>
           <Navbar />
@@ -24,7 +24,7 @@ function App() {
           </div>
         </Router>
       </AlertState>
-    </GithubContext>
+    </GithubState>
   );
 }
 

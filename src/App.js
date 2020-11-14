@@ -18,7 +18,7 @@ function App() {
             <Switch>
               <Route path="/" exact component={Home} />
               <Route path="/about" component={About} />
-              <Route path="/profile:name" component={Profile} />
+              <Route path="/profile/:name" component={Profile} />
             </Switch>
             <Alert alert={{ text: "test-alert" }} />
           </div>

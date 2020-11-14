@@ -65,7 +65,7 @@ export const GithubState = ({ children }) => {
 
     dispatch({
       type: GET_REPOSITORIES,
-      payload: [],
+      payload: response.data,
     });
   };
 

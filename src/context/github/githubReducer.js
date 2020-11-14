@@ -15,12 +15,12 @@ const handlers = {
   [GET_REPOSITORIES]: (state, { payload }) => ({
     ...state,
     repositories: payload,
-    loadig: false,
+    loading: false,
   }),
   [GET_USERS]: (state, { payload }) => ({
     ...state,
     user: payload,
-    loadig: false,
+    loading: false,
   }),
   [SET_LOADING]: (state) => ({ ...state, loading: true }),
   [CLEAR_USERS]: (state) => ({ ...state, users: [] }),

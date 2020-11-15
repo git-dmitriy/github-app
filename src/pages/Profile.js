@@ -44,10 +44,18 @@ export const Profile = ({ match }) => {
       <div className="card mb-4">
         <div className="card-body">
           <div className="row">
-            <div className="col-sm-3 text-center">
-              <img src={avatar_url} alt={name} style={{ width: "150px" }} />
+            <div className="col-sm-6 text-center">
+              <img src={avatar_url} alt={name} style={{ width: "200px" }} />
               <h1>Name</h1>
               {location && <p>Местоположение: {location}</p>}
+              <a
+                href={html_url}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-dark mb-3"
+              >
+                Открыть профиль
+              </a>
             </div>
             <div className="col">
               {bio && (
@@ -56,14 +64,6 @@ export const Profile = ({ match }) => {
                   <p>{bio}</p>
                 </Fragment>
               )}
-              <a
-                href={html_url}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-dark"
-              >
-                Открыть профиль
-              </a>
               <ul>
                 {login && (
                   <li>
@@ -84,12 +84,14 @@ export const Profile = ({ match }) => {
                   </li>
                 )}
               </ul>
-              <div className="badge badge-primary">Подписчики: {followers}</div>
-              <div className="badge badge-success">Подписан: {following}</div>
-              <div className="badge badge-info">
+              <span className="badge badge-primary">
+                Подписчики: {followers}
+              </span>{" "}
+              <span className="badge badge-success">Подписан: {following}</span>{" "}
+              <span className="badge badge-info">
                 Репозитории: {public_repos}
-              </div>
-              <div className="badge badge-dark">Gists: {public_gists}</div>
+              </span>{" "}
+              <span className="badge badge-dark">Gists: {public_gists}</span>
             </div>
           </div>
         </div>

@@ -25,9 +25,6 @@ export const GithubState = ({ children }) => {
   const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
   const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
 
-  console.log(CLIENT_ID);
-  console.log(CLIENT_SECRET);
-
   const [state, dispatch] = useReducer(githubReducer, initialState);
 
   const search = async (value) => {

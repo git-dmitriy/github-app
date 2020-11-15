@@ -1,5 +1,6 @@
 import React, { Fragment, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Repositories } from "../components/Repositories";
 import { GithubContext } from "../context/github/githubContext";
 
 export const Profile = ({ match }) => {
@@ -7,7 +8,6 @@ export const Profile = ({ match }) => {
     GithubContext
   );
   const values = useContext(GithubContext);
-  console.log(values);
 
   const urlName = match.params.name;
 
@@ -94,7 +94,7 @@ export const Profile = ({ match }) => {
           </div>
         </div>
       </div>
-      {repositories.join()}
+      <Repositories repositories={repositories} />
     </div>
   );
 };

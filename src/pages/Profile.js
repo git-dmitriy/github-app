@@ -46,7 +46,7 @@ export const Profile = ({ match }) => {
           <div className="row">
             <div className="col-sm-6 text-center">
               <img src={avatar_url} alt={name} style={{ width: "200px" }} />
-              <h1>Name</h1>
+              <h1>{name}</h1>
               {location && <p>Местоположение: {location}</p>}
               <a
                 href={html_url}
